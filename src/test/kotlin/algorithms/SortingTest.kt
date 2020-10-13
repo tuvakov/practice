@@ -17,6 +17,13 @@ internal class SortingTest {
         assertTrue(arr.isSorted())
     }
 
+    @ParameterizedTest
+    @MethodSource("arguments")
+    fun bubbleSort(arr: IntArray) {
+        Sorting.bubbleSort(arr)
+        assertTrue(arr.isSorted())
+    }
+
     companion object {
         @JvmStatic
         fun arguments(): Stream<Arguments> {

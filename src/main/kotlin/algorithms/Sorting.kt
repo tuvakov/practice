@@ -13,6 +13,20 @@ object Sorting {
         }
     }
 
+    fun bubbleSort(arr: IntArray) {
+        for (i in 0..arr.lastIndex) {
+            var swapFlag = false
+            for (j in 0 until arr.lastIndex - i) {
+                if (arr[j] > arr[j + 1]) {
+                    swap(arr, j, j + 1)
+                    swapFlag = true
+                }
+            }
+            // No swaps means, the array is already sorted
+            if (!swapFlag) break
+        }
+    }
+    
     private fun swap(arr: IntArray, i: Int, j: Int) {
         val temp = arr[i]
         arr[i] = arr[j]
