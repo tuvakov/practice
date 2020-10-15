@@ -24,6 +24,13 @@ internal class SortingTest {
         assertTrue(arr.isSorted())
     }
 
+    @ParameterizedTest
+    @MethodSource("arguments")
+    fun insertionSort(arr: IntArray) {
+        Sorting.insertionSort(arr)
+        assertTrue(arr.isSorted())
+    }
+
     companion object {
         @JvmStatic
         fun arguments(): Stream<Arguments> {

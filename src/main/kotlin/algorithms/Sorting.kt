@@ -26,7 +26,17 @@ object Sorting {
             if (!swapFlag) break
         }
     }
-    
+
+    fun insertionSort(arr: IntArray) {
+        for (i in 1..arr.lastIndex) {
+            var j = i
+            while (j >= 1 && arr[j] < arr[j - 1]) {
+                swap(arr, j, j - 1)
+                --j
+            }
+        }
+    }
+
     private fun swap(arr: IntArray, i: Int, j: Int) {
         val temp = arr[i]
         arr[i] = arr[j]
