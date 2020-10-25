@@ -37,11 +37,48 @@ object Sorting {
         }
     }
 
+    fun mergeSort(arr: IntArray) {
+        mergeSortInternal(arr)
+    }
+
+    private fun mergeSortInternal(arr: IntArray) {
+        if (arr.size < 2)
+            return
+
+        val middle: Int = arr.size / 2
+        val left = arr.copyOfRange(0, middle)           // [start, end)
+        val right = arr.copyOfRange(middle, arr.size)
+
+        mergeSortInternal(left)
+        mergeSortInternal(right)
+        merge(left, right, arr)
+    }
+
+    private fun merge(left: IntArray, right: IntArray, arr: IntArray) {
+        var l = 0
+        var r = 0
+        var k = 0
+
+        while (l < left.size && r < right.size) {
+            arr[k++] = if (left[l] <= right[r]) left[l++] else right[r++]
+        }
+
+        while (l < left.size) {
+            arr[k++] = left[l++]
+        }
+
+        while (r < right.size) {
+            arr[k++] = right[r++]
+        }
+    }
+
     private fun swap(arr: IntArray, i: Int, j: Int) {
         val temp = arr[i]
         arr[i] = arr[j]
         arr[j] = temp
     }
+
+    /* Extensions */
 
     fun IntArray.isSorted(): Boolean {
         for (i in 0 until lastIndex) {

@@ -31,6 +31,20 @@ internal class SortingTest {
         assertTrue(arr.isSorted())
     }
 
+    @ParameterizedTest
+    @MethodSource("arguments")
+    fun mergeSort(arr: IntArray) {
+        Sorting.mergeSort(arr)
+        assertTrue(arr.isSorted())
+    }
+
+    @ParameterizedTest
+    @MethodSource("argumentsLarge")
+    fun mergeSort_largeInput(arr: IntArray) {
+        Sorting.mergeSort(arr)
+        assertTrue(arr.isSorted())
+    }
+
     companion object {
         @JvmStatic
         fun arguments(): Stream<Arguments> {
@@ -42,6 +56,16 @@ internal class SortingTest {
                 Arguments.of(randomIntArray(size = 150)),
                 Arguments.of(randomIntArray(size = 1000)),
                 Arguments.of(randomIntArray(size = 10_000))
+            )
+        }
+
+        @JvmStatic
+        fun argumentsLarge(): Stream<Arguments> {
+            val arr = randomIntArray(size = 10_000_000)
+            return Stream.of(
+                Arguments.of(arr),
+                Arguments.of(arr.apply { sort() }),
+                Arguments.of(arr.apply { sortDescending() })
             )
         }
 
