@@ -45,6 +45,20 @@ internal class SortingTest {
         assertTrue(arr.isSorted())
     }
 
+    @ParameterizedTest
+    @MethodSource("arguments")
+    fun quickSort(arr: IntArray) {
+        Sorting.quickSort(arr)
+        assertTrue(arr.isSorted())
+    }
+
+    @ParameterizedTest
+    @MethodSource("argumentsLarge")
+    fun quickSort_largeInput(arr: IntArray) {
+        Sorting.quickSort(arr)
+        assertTrue(arr.isSorted())
+    }
+
     companion object {
         @JvmStatic
         fun arguments(): Stream<Arguments> {
