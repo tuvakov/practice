@@ -12,10 +12,19 @@ internal class IntersectionOfTwoArraysTest {
 
     @ParameterizedTest
     @MethodSource("arguments")
-    fun intersect(nums1: IntArray, nums2: IntArray, expected: IntArray) {
+    fun intersectMap(nums1: IntArray, nums2: IntArray, expected: IntArray) {
         assertArrayEquals(
-            subject.intersect(nums1, nums2),
-            expected.sorted().toIntArray()
+            subject.intersectMap(nums1, nums2).sortedArray(),
+            expected
+        )
+    }
+
+    @ParameterizedTest
+    @MethodSource("arguments")
+    fun intersectSort(nums1: IntArray, nums2: IntArray, expected: IntArray) {
+        assertArrayEquals(
+            subject.intersectSort(nums1, nums2).sortedArray(),
+            expected
         )
     }
 
@@ -33,6 +42,36 @@ internal class IntersectionOfTwoArraysTest {
                     intArrayOf(4, 9, 5),
                     intArrayOf(9, 4, 9, 8, 4),
                     intArrayOf(4, 9)
+                ),
+                Arguments.of(
+                    intArrayOf(4, 9, 5),
+                    intArrayOf(4, 5, 9),
+                    intArrayOf(4, 5, 9)
+                ),
+                Arguments.of(
+                    intArrayOf(10),
+                    intArrayOf(10),
+                    intArrayOf(10)
+                ),
+                Arguments.of(
+                    intArrayOf(10, 12, 13),
+                    intArrayOf(8, 9, 7),
+                    intArrayOf()
+                ),
+                Arguments.of(
+                    intArrayOf(10, 12, 13),
+                    intArrayOf(7, 9, 10),
+                    intArrayOf(10)
+                ),
+                Arguments.of(
+                    intArrayOf(1, 1, 1, 1, 1, 1),
+                    intArrayOf(1, 1, 1, 1, 1, 1),
+                    intArrayOf(1, 1, 1, 1, 1, 1)
+                ),
+                Arguments.of(
+                    intArrayOf(1, 1, 1),
+                    intArrayOf(1, 1, 1, 1, 1, 1),
+                    intArrayOf(1, 1, 1)
                 )
             )
         }
