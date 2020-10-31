@@ -1,4 +1,4 @@
-package leetcode
+package leetcode.sort
 
 /*
  * Link: https://leetcode.com/problems/sort-colors/
@@ -47,7 +47,7 @@ class SortColors {
     }
 
     private fun swap(nums: IntArray, firstIdx: Int, secondIdx: Int) {
-        val temp = nums[firstIdx];
+        val temp = nums[firstIdx]
         nums[firstIdx] = nums[secondIdx]
         nums[secondIdx] = temp
     }

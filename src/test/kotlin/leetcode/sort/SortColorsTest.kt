@@ -1,4 +1,4 @@
-package leetcode
+package leetcode.sort
 
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.params.ParameterizedTest

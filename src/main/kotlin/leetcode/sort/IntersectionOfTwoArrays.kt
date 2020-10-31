@@ -1,4 +1,4 @@
-package leetcode
+package leetcode.sort
 
 /*
 * Link: https://leetcode.com/problems/intersection-of-two-arrays-ii
