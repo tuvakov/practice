@@ -12,7 +12,7 @@ internal class PivotIndexTest {
 
     @ParameterizedTest
     @MethodSource("arguments")
-    fun findDuplicate(nums: IntArray, expected: Int) {
+    fun pivotIndex(nums: IntArray, expected: Int) {
         assertEquals(expected, subject.pivotIndex(nums))
     }
 
