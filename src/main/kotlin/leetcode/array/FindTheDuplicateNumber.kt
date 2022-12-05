@@ -1,4 +1,4 @@
-package leetcode
+package leetcode.array
 
 /*
  * Link: https://leetcode.com/problems/find-the-duplicate-number/

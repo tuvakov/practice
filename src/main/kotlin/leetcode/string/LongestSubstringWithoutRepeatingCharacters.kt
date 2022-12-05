@@ -1,6 +1,4 @@
-package leetcode
-
-import kotlin.math.max
+package leetcode.string
 
 /*
  * Link: https://leetcode.com/problems/longest-substring-without-repeating-characters/
@@ -10,7 +8,7 @@ class LongestSubstringWithoutRepeatingCharacters {
     fun lengthOfLongestSubstring(s: String): Int {
         if (s.isEmpty()) return 0
         var length = 0
-        var left = 0;
+        var left = 0
         var right = 0
         val seen = mutableSetOf<Char>()
         while (right < s.length) {
