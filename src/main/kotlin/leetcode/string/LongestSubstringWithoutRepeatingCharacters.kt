@@ -21,6 +21,6 @@ class LongestSubstringWithoutRepeatingCharacters {
                 seen.remove(s[left++])
             }
         }
-        return maxOf(length, seen.size)
+        return length
     }
 }
