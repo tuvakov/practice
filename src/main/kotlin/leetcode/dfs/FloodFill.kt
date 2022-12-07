@@ -1,4 +1,4 @@
-package leetcode.array
+package leetcode.dfs
 
 /*
  * https://leetcode.com/problems/flood-fill/
