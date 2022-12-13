@@ -19,7 +19,7 @@ internal class IsSubsequenceTest {
     companion object {
         @JvmStatic
         private fun arguments(): Stream<Arguments> {
-            // nums, target, expected
+            // s, t, output
             return Stream.of(
                 Arguments.of("abc", "ahbgdc", true),
                 Arguments.of("axc", "ahbgdc", false),
