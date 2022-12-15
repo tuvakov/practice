@@ -7,17 +7,20 @@ package leetcode.string
 class IsIsomorphic {
 
     fun isIsomorphic(s: String, t: String): Boolean {
-        val map = mutableMapOf<Char, Char>()
+        val sMap = mutableMapOf<Char, Int>()
+        val tMap = mutableMapOf<Char, Int>()
 
         for (idx in s.indices) {
             val sChar = s[idx]
             val tChar = t[idx]
-            if (sChar in map) {
-                if (map[sChar] != tChar) return false
-            } else {
-                if (!map.containsValue(tChar)) map[sChar] = tChar
-                else return false
-            }
+
+            val sIdx = sMap[sChar] ?: -1
+            val tIdx = tMap[tChar] ?: -1
+
+            if (sIdx != tIdx) return false
+
+            sMap[sChar] = idx
+            tMap[tChar] = idx
         }
 
         return true
