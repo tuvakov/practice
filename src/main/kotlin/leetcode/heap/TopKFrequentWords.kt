@@ -1,4 +1,4 @@
-package leetcode.string
+package leetcode.heap
 
 import java.util.Comparator
 import java.util.PriorityQueue
