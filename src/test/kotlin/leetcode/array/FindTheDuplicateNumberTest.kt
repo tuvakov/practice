@@ -1,6 +1,4 @@
-package leetcode
-
-import leetcode.array.FindTheDuplicateNumber
+package leetcode.array
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.params.ParameterizedTest

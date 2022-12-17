@@ -1,6 +1,5 @@
-package leetcode
+package leetcode.array
 
-import leetcode.array.RemoveDuplicatesInSortedArray
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
