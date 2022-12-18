@@ -13,7 +13,7 @@ class PermutationInStringTest {
     @ParameterizedTest
     @MethodSource("arguments")
     fun checkInclusion(s: String, t: String, output: Boolean) {
-        val result = subject.checkInclusion(s, t)
+        val result = subject.checkInclusion2(s, t)
         assertEquals(output, result)
     }
 
