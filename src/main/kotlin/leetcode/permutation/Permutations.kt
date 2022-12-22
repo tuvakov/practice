@@ -1,4 +1,4 @@
-package leetcode.array
+package leetcode.permutation
 
 import java.util.LinkedList
 
