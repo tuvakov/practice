@@ -17,6 +17,13 @@ class HammingWeightTest {
         assertEquals(Integer.bitCount(num), result)
     }
 
+    @ParameterizedTest
+    @MethodSource("arguments")
+    fun hammingWeight2(num: Int) {
+        val result = subject.hammingWeight2(num)
+        assertEquals(Integer.bitCount(num), result)
+    }
+
     companion object {
         @JvmStatic
         private fun arguments(): Stream<Arguments> {
