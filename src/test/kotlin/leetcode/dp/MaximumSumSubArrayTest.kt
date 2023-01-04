@@ -1,4 +1,4 @@
-package leetcode.array
+package leetcode.dp
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.params.ParameterizedTest
@@ -6,9 +6,11 @@ import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
 import java.util.stream.Stream
 
-class MaximumSubArrayTest {
+//Arguments.of(intArrayOf(2, 3, -2, 4), 6),
 
-    private val subject = MaximumSubArray()
+class MaximumSumSubArrayTest {
+
+    private val subject = MaximumSumSubArray()
 
     @ParameterizedTest
     @MethodSource("arguments")

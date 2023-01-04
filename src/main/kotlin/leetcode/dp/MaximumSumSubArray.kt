@@ -1,10 +1,10 @@
-package leetcode.array
+package leetcode.dp
 
 /*
  * https://leetcode.com/problems/maximum-subarray/
  */
 
-class MaximumSubArray {
+class MaximumSumSubArray {
     fun maxSubArray(nums: IntArray): Int {
         var global = Int.MIN_VALUE
         var local = 0
