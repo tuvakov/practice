@@ -3,6 +3,10 @@ package leetcode.math
 import java.lang.StringBuilder
 import java.util.LinkedList
 
+/*
+ * https://leetcode.com/problems/multiply-strings
+ */
+
 class MultiplyStrings {
     fun multiply(num1: String, num2: String): String {
 

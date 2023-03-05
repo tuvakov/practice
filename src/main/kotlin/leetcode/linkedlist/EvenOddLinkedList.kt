@@ -2,6 +2,10 @@ package leetcode.linkedlist
 
 import leetcode.ListNode
 
+/*
+ * https://leetcode.com/problems/odd-even-linked-list
+ */
+
 class EvenOddLinkedList {
 
     fun oddEvenList(head: ListNode?): ListNode? {

@@ -2,6 +2,10 @@ package leetcode.linkedlist
 
 import leetcode.ListNode
 
+/*
+ * https://leetcode.com/problems/palindrome-linked-list
+ */
+
 class PalindromeLinkedList {
     fun isPalindrome(head: ListNode?): Boolean {
 
